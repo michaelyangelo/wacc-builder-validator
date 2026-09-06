@@ -1,6 +1,6 @@
 ---
 name: wacc-builder-validator
-license: MIT OR Apache-2.0
+license: Apache-2.0
 description: Build, reconstruct, source, calculate, validate, challenge, and explain professional WACCs and their component discount rates from workbooks, pasted calculations, or user-provided inputs. Use when a finance professional wants to build a WACC from first principles, validate an existing build against the bundled best-practice professional WACC SOP, review cost of equity/debt, beta, capital structure, country/currency/size adjustments, or determine when WACC is inappropriate and a project, claim-specific, APV, SOTP, impairment, lease, liability, or term-structure method is required. Do not use as an audit, fairness opinion, investment recommendation, market-data terminal, or automatic workbook-repair tool.
 ---
 
