@@ -441,4 +441,3 @@ never respond with only `Not testable` and never silently increase the rate.
 The Skill succeeds when it saves review time, finds a material omission or
 inconsistency, improves defence, or creates a useful handoff record—not merely
 when the output looks polished or repeats a formula.
-

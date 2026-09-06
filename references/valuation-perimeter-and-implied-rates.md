@@ -240,4 +240,3 @@ Describe a reverse-solved result as **market-implied under the stated
 assumptions**, not as an observed WACC. Never state that a single WACC is
 reliable when the valuation object, claim, or cash-flow basis remains
 unresolved.
-

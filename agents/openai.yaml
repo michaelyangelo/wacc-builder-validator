@@ -2,4 +2,3 @@ interface:
   display_name: "WACC Builder and Validator"
   short_description: "Build and validate professional WACCs"
   default_prompt: "Use $wacc-builder-validator to build a professional WACC or validate an existing build against the bundled best-practice SOP."
-

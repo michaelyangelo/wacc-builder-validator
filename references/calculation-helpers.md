@@ -196,4 +196,3 @@ CAUTION/PASS. Missing required evidence, absent selected/applied rates, or
 unverified scenarios prevent a reliance approval. CAUTION with complete
 required evidence can be Ready with caveats; Path Q remains provisional.
 The helper never selects, applies, edits, or silently normalizes a rate.
-

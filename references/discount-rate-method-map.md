@@ -313,4 +313,3 @@ object and claim labels, capital-stack method switches, cash-flow
 classification, market-implied-rate reconstruction, transaction
 double-counting, and terminal normalization. This file supplies formulas and
 output structures only.
-

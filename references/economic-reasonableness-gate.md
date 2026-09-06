@@ -282,4 +282,3 @@ Follow the default and expanded Excel structures in
 gate blocks reliance, place one concise status and reason in the existing
 selected/applied-rate rows; include detailed diagnostics only in an explicitly
 requested expanded report.
-

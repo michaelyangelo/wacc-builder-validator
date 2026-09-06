@@ -112,4 +112,3 @@ When a user supplies a workbook or calculation for review:
 Do not call a difference a defect merely because the user used another accepted
 method. The comparison should identify where the build is weaker, stronger, or
 simply different from this SOP and what that means for reliance.
-

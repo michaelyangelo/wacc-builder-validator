@@ -138,4 +138,3 @@ the local setup; it does not verify every formula in a real workbook.
 
 To update an installation, replace it with one complete version of the skill
 folder. Do not mix scripts from one version with references from another.
-

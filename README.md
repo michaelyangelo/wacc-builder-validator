@@ -63,4 +63,3 @@ terminal, full valuation opinion, or automatic workbook-repair tool.
 This skill is dual-licensed at your option under the MIT License or Apache
 License 2.0. See [LICENSE-MIT](LICENSE-MIT) and
 [LICENSE-APACHE](LICENSE-APACHE).
-

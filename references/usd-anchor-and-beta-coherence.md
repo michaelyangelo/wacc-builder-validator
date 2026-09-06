@@ -369,4 +369,3 @@ affirmatively verify the exact company name, ticker, exchange, security class,
 and valuation date in the page, file, or structured response. A conflicting
 page title, URL identity, ticker, or instrument invalidates the number; missing
 identity leaves it unverified and unusable.
-

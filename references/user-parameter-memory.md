@@ -88,4 +88,3 @@ copyable preference profile if the user needs continuity elsewhere.
 Do not silently edit this Skill or its permanent source registry from user
 memory. Proposed permanent policy changes require an explicit maintenance
 update.
-

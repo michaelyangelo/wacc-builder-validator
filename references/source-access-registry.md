@@ -330,4 +330,3 @@ Screenshots may preserve load-bearing visual evidence when the source page or
 table is difficult to cite, but they supplement the official page, file, or
 dataset. Never fabricate a screenshot or use one to conceal an unavailable
 source.
-
