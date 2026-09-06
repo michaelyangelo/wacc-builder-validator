@@ -18,7 +18,7 @@ product.
 ## Install and use
 
 Keep this repository as one complete folder. `SKILL.md`, `agents/`,
-`references/`, `scripts/`, and both license files belong together. Python 3.10
+`references/`, `scripts/`, and the Apache-2.0 license file belong together. Python 3.10
 or newer is required to execute the deterministic calculation helpers.
 
 See [INSTALLATION.md](INSTALLATION.md) for Codex, Claude, and Excel setup steps
@@ -60,6 +60,5 @@ export. It never bypasses subscriptions or invents market data.
 It is not an audit, fairness opinion, investment recommendation, market-data
 terminal, full valuation opinion, or automatic workbook-repair tool.
 
-This skill is dual-licensed at your option under the MIT License or Apache
-License 2.0. See [LICENSE-MIT](LICENSE-MIT) and
+This skill is licensed under the Apache License 2.0. See
 [LICENSE-APACHE](LICENSE-APACHE).
