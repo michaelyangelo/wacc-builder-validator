@@ -1,64 +1,57 @@
-# WACC Builder and Validator
+# Build a WACC you can explain and defend
 
-This is an experimental, professional-facing skill for building WACC from
-first principles and validating an existing build against a bundled
-best-practice professional SOP.
+Build a source-backed WACC or review one you already have. Follow the inputs
+and assumptions, check the calculation, and see how the calculated rate
+compares with the rate actually used in your model.
 
-It leads with construction: valuation perimeter, method choice, source-dated
-inputs, cost of equity, after-tax cost of debt, capital weights, calculated
-WACC, selected WACC, and the rate actually applied. When a user supplies a
-workbook or calculation for review, it also performs a side-by-side comparison
-with the bundled SOP and identifies defensible exceptions, gaps, omissions,
-double counting, and unsupported adjustments.
+Start with a compact rate summary and the main points to review. Then work
+through the details, ask questions, and prepare your conclusion.
 
-The workflow is self-contained. It uses the bundled SOP and references,
-user-provided evidence, and authorised capabilities available in the active AI
-product.
+Choose your AI tool below to get started.
 
-## Install and use
+## Get started
 
-Keep this repository as one complete folder. `SKILL.md`, `agents/`,
-`references/`, `scripts/`, and the Apache-2.0 license file belong together. Python 3.10
-or newer is required to execute the deterministic calculation helpers.
+Use the complete repository folder: `SKILL.md`, `agents/`, `references/`,
+`scripts/`, and the Apache-2.0 license file belong together. Downloading only
+`SKILL.md` leaves out the method and calculation helpers.
 
-See [INSTALLATION.md](INSTALLATION.md) for Codex, Claude, and Excel setup steps
-and a first-use prompt. Fresh installation and full walkthrough checks in the
-named AI hosts remain pending.
+Follow the short, host-specific steps in [INSTALLATION.md](INSTALLATION.md).
+The supported starting routes are local Codex installation and Claude skill
+upload. Fresh end-to-end tests in those hosts are still pending.
 
-## Main workflow
+## What you will see first
 
-1. Build the WACC.
-2. Validate the build and compare it with the professional SOP.
-3. Test application consistency, sensitivity, and valuation impact.
-4. Conclude and prepare the report.
+With enough evidence, the skill opens with a concise summary, one rate bridge,
+up to three priority findings, and the next review sections. If material
+evidence is missing, it asks for that evidence instead of inventing inputs.
 
-The skill first shows an executive summary, one compact rate bridge, up to
-three priority findings, and a four-section contents table. Detailed work is
-shown only after the user selects a section, asks a specific question, or asks
-for the full walkthrough.
+## What the review covers
+
+1. Build or reconstruct the WACC.
+2. Check it against the bundled professional SOP.
+3. Test whether the selected rate is applied consistently and assess valuation impact.
+4. Prepare a concise conclusion.
+
+The skill separates the calculated, selected, and applied rates so that a
+reasonable calculation is not confused with how the rate was used in the model.
 
 ## Contents
 
 - [Skill instructions](SKILL.md)
+- [Installation and first-use guide](INSTALLATION.md)
 - [Bundled professional WACC SOP](references/wacc-best-practice-sop.md)
 - [Calculation-helper contract](references/calculation-helpers.md)
 - `scripts/` — deterministic calculation and validation helpers
 
-This repository is the standalone skill. Install the complete repository
-folder; downloading only `SKILL.md` omits required references and helpers.
+## Boundaries
 
-## Scope and boundaries
+The skill can identify when WACC is not the right method and route to a more
+appropriate approach. It is not an audit, fairness opinion, investment
+recommendation, market-data terminal, full valuation opinion, or automatic
+workbook-repair tool.
 
-The skill can determine that WACC is inappropriate and route to a project,
-claim-specific, APV, SOTP, impairment, lease, liability, or term-structure
-method. It does not force every discount-rate problem into WACC.
-
-Naming a paid provider does not create access. When an authorised connector is
-available, the host may use it. Otherwise, the skill requests an authorised
-export. It never bypasses subscriptions or invents market data.
-
-It is not an audit, fairness opinion, investment recommendation, market-data
-terminal, full valuation opinion, or automatic workbook-repair tool.
+It uses authorised evidence and capabilities available in the host. Naming a
+paid provider does not create access; where needed, supply an authorised export.
 
 This skill is licensed under the Apache License 2.0. See
 [LICENSE-APACHE](LICENSE-APACHE).
