@@ -14,7 +14,7 @@ Use the repository at
 [michaelyangelo/wacc-builder-validator](https://github.com/michaelyangelo/wacc-builder-validator).
 Select **Code → Download ZIP**, or clone the repository.
 
-Keep `SKILL.md`, `agents`, `references`, `scripts`, and both license files
+Keep `SKILL.md`, `agents`, `references`, `scripts`, and the Apache-2.0 license file
 together. Downloading only `SKILL.md` omits the calculation and validation
 resources.
 
