@@ -4,54 +4,51 @@ Build a source-backed WACC or review one you already have. Follow the inputs
 and assumptions, check the calculation, and see how the calculated rate
 compares with the rate actually used in your model.
 
-Start with a compact rate summary and the main points to review. Then work
-through the details, ask questions, and prepare your conclusion.
+## Start here
 
-Choose your AI tool below to get started.
+Copy this one prompt into the AI app where you want to use the skill. You do
+not need to know its setup process or choose a brand first.
 
-## Get started
+```text
+Set up WACC Builder and Validator from: https://github.com/michaelyangelo/wacc-builder-validator
+The complete ready-to-upload package is also here: https://github.com/michaelyangelo/wacc-builder-validator/raw/refs/heads/main/wacc-builder-validator-skill.zip
+Use the complete skill, including its references and calculation helpers. Confirm that all required package files are available and whether the helpers can execute in this app.
+Install it for future use if this app supports that. Handle the download and setup yourself wherever possible.
+If a manual upload is required, give me the ready-to-upload file and the exact next action. If you can only use it within this conversation, explain that clearly and load the complete package for this session.
+Confirm what is ready and whether it will remain available in future conversations. Do not claim installation or successful checks that you could not perform.
+```
 
-Use the complete repository folder: `SKILL.md`, `agents/`, `references/`,
-`scripts/`, and the Apache-2.0 license file belong together. Downloading only
-`SKILL.md` leaves out the method and calculation helpers.
+The app should choose the route it supports:
 
-Follow the short, host-specific steps in [INSTALLATION.md](INSTALLATION.md).
-The supported starting routes are local Codex installation and Claude skill
-upload. Fresh end-to-end tests in those hosts are still pending.
+- **Automatic setup:** it fetches and installs the complete skill, then tells
+  you whether it will remain available later.
+- **Upload:** download the [ready-to-upload ZIP](https://github.com/michaelyangelo/wacc-builder-validator/raw/refs/heads/main/wacc-builder-validator-skill.zip)
+  and upload it exactly as supplied. Do not rename or repack it.
+- **Current conversation:** if the app cannot install it for future use, attach
+  that ZIP and ask it to use the complete skill for this conversation only. It
+  must say that the setup is temporary and whether the helpers can execute.
 
-## What you will see first
+If a required capability is missing, the app should state the precise gap
+instead of implying that setup or checks succeeded.
 
-With enough evidence, the skill opens with a concise summary, one rate bridge,
-up to three priority findings, and the next review sections. If material
-evidence is missing, it asks for that evidence instead of inventing inputs.
+## First use
 
-## What the review covers
+Attach your workbook and send:
 
-1. Build or reconstruct the WACC.
-2. Check it against the bundled professional SOP.
-3. Test whether the selected rate is applied consistently and assess valuation impact.
-4. Prepare a concise conclusion.
+```text
+Use WACC Builder and Validator on this workbook. Review and reconstruct an existing WACC; if I ask for a new WACC, build it from first principles. Preserve the original workbook, cite exact cells, separate calculated, selected, and applied rates, and label unverified evidence.
+```
 
-The skill separates the calculated, selected, and applied rates so that a
-reasonable calculation is not confused with how the rate was used in the model.
+Expect a concise rate summary, one rate bridge, up to three priority findings,
+and a guided next step. See [INSTALLATION.md](INSTALLATION.md) for the route
+details and optional technical notes.
 
-## Contents
+Fresh host-installation and full-workbook walkthrough tests are still pending.
 
-- [Skill instructions](SKILL.md)
-- [Installation and first-use guide](INSTALLATION.md)
-- [Bundled professional WACC SOP](references/wacc-best-practice-sop.md)
-- [Calculation-helper contract](references/calculation-helpers.md)
-- `scripts/` — deterministic calculation and validation helpers
-
-## Boundaries
-
-The skill can identify when WACC is not the right method and route to a more
-appropriate approach. It is not an audit, fairness opinion, investment
-recommendation, market-data terminal, full valuation opinion, or automatic
-workbook-repair tool.
-
-It uses authorised evidence and capabilities available in the host. Naming a
-paid provider does not create access; where needed, supply an authorised export.
+The skill is a guided WACC review tool. It is not an audit, fairness opinion,
+investment recommendation, market-data terminal, full valuation opinion, or
+automatic workbook-repair tool. The repository publishes a skill package; it
+is not a Microsoft 365 Copilot agent or ChatGPT plugin.
 
 This skill is licensed under the Apache License 2.0. See
 [LICENSE-APACHE](LICENSE-APACHE).

@@ -1,100 +1,86 @@
 # Install and start your WACC review
 
-Choose one host. Local Codex installation and Claude skill upload are the
-available routes described here. Fresh end-to-end tests in those hosts are
-still pending, so this guide does not claim a personally tested route.
+Start with the setup prompt. Ask the AI app to choose the route it supports.
 
-Before starting, download the complete repository using **Code → Download ZIP**
-on [GitHub](https://github.com/michaelyangelo/wacc-builder-validator), then
-extract it. Rename the folder that directly contains `SKILL.md` (commonly
-`wacc-builder-validator-main`) to `wacc-builder-validator`; do the same for
-another branch suffix. Do not leave it double-nested after extracting. Keep
-`SKILL.md`, `agents/`, `references/`, `scripts/`, and
-`LICENSE-APACHE` together.
-
-## Codex: install into a project folder
-
-1. Open the project folder where you want to use the skill.
-2. Create this folder inside it if needed: `.agents/skills`.
-3. Copy the complete extracted `wacc-builder-validator` folder into
-   `.agents/skills`.
-4. Check that this file now exists:
-   `your-project/.agents/skills/wacc-builder-validator/SKILL.md`.
-5. Open the project in Codex and start a new task. If the skill is not shown,
-   restart Codex.
-6. Attach the workbook, then send the starter prompt below.
-
-## Claude: upload the complete skill
-
-1. In Claude, open **Customize → Skills**.
-2. Select **+ → Create skill → Upload a skill**.
-3. Upload a ZIP whose top-level folder is `wacc-builder-validator` and that
-   contains `SKILL.md`, `agents/`, `references/`, and `scripts/`.
-4. Enable the uploaded skill, start a new conversation, and attach the workbook.
-5. Send the starter prompt below.
-
-Your organisation may need to enable Skills or code execution before these
-controls appear. See [Claude’s skill instructions](https://support.claude.com/en/articles/12512180-use-skills-in-claude).
-
-## Starter prompt
+## One setup prompt
 
 ```text
-Use $wacc-builder-validator to review the WACC in the attached workbook.
-Reconstruct the existing calculation. Keep the original workbook unchanged and
-show calculated, selected, and applied rates separately.
+Set up WACC Builder and Validator from: https://github.com/michaelyangelo/wacc-builder-validator
+The complete ready-to-upload package is also here: https://github.com/michaelyangelo/wacc-builder-validator/raw/refs/heads/main/wacc-builder-validator-skill.zip
+Use the complete skill, including its references and calculation helpers. Confirm that all required package files are available and whether the helpers can execute in this app.
+Install it for future use if this app supports that. Handle the download and setup yourself wherever possible.
+If a manual upload is required, give me the ready-to-upload file and the exact next action. If you can only use it within this conversation, explain that clearly and load the complete package for this session.
+Confirm what is ready and whether it will remain available in future conversations. Do not claim installation or successful checks that you could not perform.
 ```
 
-On Claude, use **WACC Builder and Validator** if the host does not support the
-`$wacc-builder-validator` form.
+## Use the route the app reports
 
-### Your first response
+**Automatic setup.** If the app supports setup for future use, let it fetch and
+install the complete skill. It should say whether it will remain available
+later.
 
-When the workbook has enough evidence, expect a compact rate summary, one rate
-bridge, up to three priority findings, and the next review sections. If a key
-input or workbook reference is missing, expect a request for that evidence.
+**Upload.** Download the [ready-to-upload ZIP](https://github.com/michaelyangelo/wacc-builder-validator/raw/refs/heads/main/wacc-builder-validator-skill.zip)
+and upload that single file exactly as supplied. Do not rename or repack it.
 
-## Optional: Excel routes
+**Current conversation.** If the app cannot install the skill for future use,
+attach that ZIP and ask it to use the complete skill for this conversation. It
+must say that the setup is temporary and whether the calculation helpers can
+execute. If it cannot fetch the link, download the ZIP yourself and attach it.
 
-Claude for Excel may be useful when the same account has the skill enabled and
-the add-in can access the workbook. Ask it to cite the exact input, formula,
-and applied-rate cells before relying on the result. Its ability to run this
-skill’s bundled Python helpers has not been verified.
+## First use
 
-There is no ready-to-import Microsoft 365 Copilot agent in this repository.
-The repository ZIP is not a Copilot installer.
+Attach your workbook and send:
 
-## Troubleshooting
+```text
+Use WACC Builder and Validator on this workbook. Review and reconstruct an existing WACC; if I ask for a new WACC, build it from first principles. Preserve the original workbook, cite exact cells, separate calculated, selected, and applied rates, and label unverified evidence.
+```
 
-<details>
-<summary>The skill is not visible</summary>
-
-Check the folder nesting or enabled state, then restart the host if needed.
-For Codex, the `SKILL.md` path must match the path shown above.
-</details>
+Expect a concise rate summary, one rate bridge, up to three priority findings,
+and a guided next step. Fresh host-installation and full-workbook walkthrough
+tests remain pending, so this guide does not claim that either has been tested.
 
 <details>
-<summary>A reference or helper is missing</summary>
+<summary>Technical details and troubleshooting</summary>
 
-Reinstall the complete folder or ZIP. Do not install `SKILL.md` on its own.
+The ZIP has one top-level folder and contains the complete runtime package:
+
+```text
+wacc-builder-validator/
+├── SKILL.md
+├── LICENSE-APACHE
+├── agents/openai.yaml
+├── references/
+│   ├── calculation-helpers.md
+│   ├── discount-rate-method-map.md
+│   ├── economic-reasonableness-gate.md
+│   ├── source-access-registry.md
+│   ├── usd-anchor-and-beta-coherence.md
+│   ├── user-parameter-memory.md
+│   ├── valuation-perimeter-and-implied-rates.md
+│   └── wacc-best-practice-sop.md
+└── scripts/
+    ├── calculate_peer_beta.py
+    ├── economic_reasonableness_gate.py
+    └── solve_implied_rate.py
+```
+
+The helpers require Python 3.10 or newer and use only the standard library.
+If the host cannot execute Python, the helper checks remain unverified. Do not
+install `SKILL.md` alone: the references and helpers carry the method and
+calculation controls.
+
+The guided review has four sections: build the WACC; validate an existing build
+against the professional SOP; test application, sensitivity, and valuation
+impact; then conclude and ready the result for reporting. It keeps calculated,
+selected, and applied rates separate and cites exact workbook evidence.
+
+The skill can identify when WACC is not the right method, but it is not an
+audit, fairness opinion, investment recommendation, market-data terminal, full
+valuation opinion, or automatic workbook-repair tool. Naming a paid provider
+does not create access; provide authorised evidence when needed.
+
+If the app says a reference or helper is missing, attach the complete ZIP
+again. If it cannot install skills or read packages, it should report that
+precise limitation rather than treating a generic WACC request as setup.
+
 </details>
-
-<details>
-<summary>The host cannot execute Python</summary>
-
-The deterministic helpers remain unverified in that host. Use a host with
-Python execution support, or ask for an evidence-backed review without claiming
-the helpers ran.
-</details>
-
-<details>
-<summary>How do I check the installation?</summary>
-
-Ask the assistant to open `references/calculation-helpers.md`, identify the
-three bundled scripts, and run each with `--help` if execution is available.
-Then check one cited input, formula, and applied-rate cell in your own workbook.
-</details>
-
-For a fuller review, include the valuation date, company or asset, cash-flow
-currency, purpose, and any source rules you already use. The skill uses only
-authorised evidence; supply an authorised export when a needed provider is not
-available.
